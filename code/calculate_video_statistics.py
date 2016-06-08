@@ -105,7 +105,7 @@ def main():
 
 
     # reading sparse frames:
-    rolling_mean, rolling_var = calculateRollingStats(os.path.join(video_path,filename_in),lag = 3,subsampleRate = 10)
+    rolling_mean, rolling_var = calculateRollingStats(filename_in, lag = 3,subsampleRate = 10)
 
     # uncomment to create a video
     # createRollingStatsVideo(rolling_mean,rolling_var,os.path.join(results_path,videoname), subsampleRate=10, speedup=10)
