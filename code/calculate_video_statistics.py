@@ -93,10 +93,10 @@ def main():
     else:
         filename_in = 'opendap_hyrax_large_format_RS03ASHS-PN03B-06-CAMHDA301_2016_01_02_CAMHDA301-20160102T210000Z.mp4'
 
-    if len(sys.argv)<2:
+    if len(sys.argv)<=2:
         filename_out = 'RollingVariance_' + filename_in[-20:-4] + '.csv'
     else:
-        filename_out = argv[2]
+        filename_out = sys.argv[2]
 
     video_path = os.path.join(os.getcwd(),'OOIVideos')
     results_path = os.path.join(os.getcwd(),'results')
