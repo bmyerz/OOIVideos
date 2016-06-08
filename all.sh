@@ -1,5 +1,6 @@
 
 time for fn in ~/ashdm/files/RS03ASHS/PN03B/06-CAMHDA301/2016/04/04/*.mp4; do
+    echo "starting $fn"
     python code/calculate_video_statistics.py $fn
 done
 
@@ -11,6 +12,6 @@ done
 pushd ~/ashdm
 
 time python index_videos.py --src-uri gs://bdmyers_escience_camhd/files/RS03ASHS/PN03B/06-CAMHDA301/2016/04/04 --find-scene-bounds --cache-input-videos --method='1d-variance'
-time python index_videos.py --src-uri gs://bdmyers_escience_camhd/files/RS03ASHS/PN03B/06-CAMHDA301/2016/04/04 --dst-uri gs://bdmyers_escience_camhd/files/RS03ASHS/PN03B/06-CAMHDA301/2016/04/04/1dvariance --cache-input-videos --method='1d-variance'
+time python index_videos.py --src-uri gs://bdmyers_escience_camhd/files/RS03ASHS/PN03B/06-CAMHDA301/2016/04/04 --dst-uri gs://bdmyers_escience_camhd/1d-variance/RS03ASHS/PN03B/06-CAMHDA301/2016/04/04/ --cache-input-videos --method='1d-variance'
 
 popd
